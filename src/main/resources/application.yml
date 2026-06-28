@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rbac?characterEncoding=UTF-8
+    username: root
+    password: 111111
+  web:
+    resources:
+      static-locations: classpath:/public/
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      fail-on-unknown-properties: false
+server:
+  port: 8080
+  servlet:
+    encoding:
+      force-response: true
+mybatis:
+  configuration:
+    call-setters-on-nulls: true
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %class : %msg%n'
